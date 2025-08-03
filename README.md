@@ -84,4 +84,29 @@ This template comes with [Tailwind CSS](https://tailwindcss.com/) already config
 
 ---
 
+## Troubleshooting
+
+### PDF Conversion Issues
+
+If you encounter "Failed to convert PDF to image" errors, try the following:
+
+1. **Check Browser Compatibility**: Ensure you're using a modern browser (Chrome, Firefox, Safari, Edge)
+2. **File Size**: Make sure your PDF file is under 20MB
+3. **File Format**: Ensure the file is a valid PDF
+4. **Refresh Page**: Try refreshing the page if the PDF.js library fails to load
+5. **Check Console**: Open browser developer tools (F12) and check for any error messages in the Console tab
+
+### Common Issues
+
+- **Worker File Not Found**: The PDF.js worker file should be in the `public/` directory
+- **Version Mismatch**: If you see "API version does not match Worker version" error, run `npm run postinstall` to sync the worker file
+- **Canvas Not Supported**: Some older browsers don't support HTML5 Canvas
+- **Memory Issues**: Large PDF files may cause memory issues in some browsers
+
+### Debug Information
+
+The application now includes enhanced error reporting and fallback mechanisms. If PDF conversion fails, a placeholder image will be created to allow the analysis to continue.
+
+---
+
 Built with ❤️ using React Router.
